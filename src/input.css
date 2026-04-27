@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pacifico: "Pacifico", cursive;
+}
+
+/* background navbar desktop/mobile */
+nav::before {
+  content: "";
+
+  @apply absolute inset-0 bg-white/10 backdrop-blur-md rounded-b-2xl -z-10;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coffee Pandawa</title>
+
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="humburgers.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-amber-800 text-white">
+
+
+    <!-- NAVBAR -->
+    
+    <header id="Navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+        <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
+            
+            <!-- Logo Coffee Pandawa -->
+            <h1 class="font-pacifico text-2xl md:text-3xl font-bold text-amber-400 tracking-wide">
+                Coffee Pandawa
+            </h1>
+
+            <!-- Navbar Menu-->
+            <ul id="nav-menu" 
+                class="fixed top-0 -left-full w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center gap-10 text-xl transition-all duration-500 md:static md:left-0 md:h-auto md:bg-transparent md:flex-row md:gap-8 md:text-base">
+                
+                <li><a href="#" class="hover:text-amber-400 transition">Home</a></li>
+                <li><a href="#" class="hover:text-amber-400 transition">About</a></li>
+                <li><a href="#" class="hover:text-amber-400 transition">Menu</a></li>
+                <li><a href="#" class="hover:text-amber-400 transition">Contact</a></li>
+            
+            </ul>
+
+            <div id="menu-button" 
+                class="hamburger hamburger--emphatic md:!hidden z-50 cursor-pointer">
+                
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    
+<section class="relative h-screen bg-[url('assets/img/coffee-bg.jpg')] bg-cover bg-center">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-6xl mx-auto h-full flex items-center px-6">
+
+        <div class="max-w-xl">
+
+            <p class="text-amber-400 tracking-widest mb-3">
+                WELCOME TO COFFEE PANDAWA
+            </p>
+
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                Nikmati Aroma <br>
+                Kopi Terbaik Nusantara
+            </h1>
+
+            <p class="text-gray-300 mb-8 leading-relaxed">
+                Tempat terbaik untuk menikmati kopi berkualitas,
+                suasana nyaman, dan cerita yang tak terlupakan.
+            </p>
+
+            <div class="flex gap-4">
+                <a href="#menu"
+                    class="bg-amber-400 text-black px-7 py-3 rounded-full font-semibold hover:scale-105 transition">
+                    Explore Menu
+                </a>
+
+                <a href="#about"
+                    class="border border-white px-7 py-3 rounded-full hover:bg-white hover:text-black transition">
+                    About Us
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT US -->
+<section id="about" class="py-24 bg-zinc-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Image -->
+        <div>
+            <img src="assets/img/about-coffee.jpg"
+                    class="rounded-2xl shadow-2xl"
+                    alt="About Coffee">
+        </div>
+
+        <!-- Text -->
+        <div>
+            <p class="text-amber-400 tracking-widest mb-3">
+                ABOUT US
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Cerita di Balik <br> Secangkir Kopi
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+                Coffee Pandawa hadir sebagai tempat berkumpul,
+                berbagi cerita, dan menikmati kopi pilihan terbaik
+                dari berbagai daerah Indonesia.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed mb-8">
+                Kami percaya setiap cangkir kopi membawa inspirasi,
+                kenyamanan, dan pengalaman berbeda.
+            </p>
+
+            <a href="#menu"
+                class="bg-amber-400 text-black px-7 py-3 rounded-full font-semibold hover:scale-105 transition">
+                View Menu
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MENU -->
+<section id="menu" class="py-24 bg-black text-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+            <p class="text-amber-400 tracking-widest mb-3">OUR MENU</p>
+            <h2 class="text-4xl md:text-5xl font-bold">
+                Signature Coffee
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Card -->
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition">
+                <img src="assets/img/menu1.jpg" class="rounded-xl mb-5">
+                <h3 class="text-2xl font-bold mb-2">Cappuccino</h3>
+                <p class="text-gray-400 mb-4">
+                    Perpaduan espresso dan susu creamy.
+                </p>
+                <span class="text-amber-400 text-xl font-bold">Rp 28K</span>
+            </div>
+
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition">
+                <img src="assets/img/menu2.jpg" class="rounded-xl mb-5">
+                <h3 class="text-2xl font-bold mb-2">Latte Pandawa</h3>
+                <p class="text-gray-400 mb-4">
+                    Signature latte khas Coffee Pandawa.
+                </p>
+                <span class="text-amber-400 text-xl font-bold">Rp 32K</span>
+            </div>
+
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition">
+                <img src="assets/img/menu3.jpg" class="rounded-xl mb-5">
+                <h3 class="text-2xl font-bold mb-2">Espresso</h3>
+                <p class="text-gray-400 mb-4">
+                    Strong, bold, dan penuh karakter.
+                </p>
+                <span class="text-amber-400 text-xl font-bold">Rp 24K</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- TESTIMONI -->
+
+<section class="py-24 bg-zinc-950 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <p class="text-amber-400 tracking-widest mb-3">
+            TESTIMONIAL
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+            Apa Kata Mereka?
+        </h2>
+
+        <div class="bg-zinc-900 p-10 rounded-2xl">
+            <p class="text-xl text-gray-300 italic mb-6">
+                "Tempat paling nyaman buat kerja sambil ngopi.
+                Kopinya enak banget!"
+            </p>
+
+            <h4 class="text-amber-400 font-semibold">
+                - Bimo Ilham
+            </h4>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="py-10 bg-black text-center text-gray-500 border-t border-zinc-800">
+    <p>© 2026 Coffee Pandawa. All Rights Reserved.</p>
+</footer>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
