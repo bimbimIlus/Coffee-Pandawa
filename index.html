@@ -15,22 +15,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-amber-800 text-white">
-
+<body class="bg-amber-800 text-white min-w-[320px] overflow-x-hidden">
 
     <!-- NAVBAR -->
     
     <header id="Navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
-        <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
             
             <!-- Logo Coffee Pandawa -->
-            <h1 class="font-pacifico text-2xl md:text-3xl font-bold text-amber-400 tracking-wide">
+            <h1 class="font-pacifico text-2xl md:text-2xl font-bold text-amber-400 tracking-wide whitespace-nowrap">
                 Coffee Pandawa
             </h1>
 
             <!-- Navbar Menu-->
             <ul id="nav-menu" 
-                class="fixed top-0 -left-full w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center gap-10 text-xl transition-all duration-500 md:static md:left-0 md:h-auto md:bg-transparent md:flex-row md:gap-8 md:text-base">
+                class="fixed top-0 -left-full w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center gap-10 text-xl transition-all duration-500 md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:justify-end md:items-center md:gap-8 md:text-base md:ml-auto">
                 
                 <li><a href="#" class="hover:text-amber-400 transition">Home</a></li>
                 <li><a href="#" class="hover:text-amber-400 transition">About</a></li>
@@ -52,32 +51,34 @@
 
 
     <!-- HERO -->
-    
-<section class="relative h-screen bg-[url('assets/img/coffee-bg.jpg')] bg-cover bg-center">
+<section 
+class="relative h-screen bg-repeat bg-[length:180px_180px] overflow-hidden"
+style="background-image: url('assets/img/batik.jpg');">
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/60"></div>
 
     <!-- Content -->
-    <div class="relative z-10 max-w-6xl mx-auto h-full flex items-center px-6">
+    <div class="relative z-10 max-w-6xl mx-auto min-h-screen md:h-full flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-6 pt-28 pb-20 gap-8">
 
-        <div class="max-w-xl">
+        <!-- LEFT CONTENT -->
+        <div class="max-w-xl text-center md:text-left">
 
-            <p class="text-amber-400 tracking-widest mb-3">
+            <p class="text-amber-400 tracking-[4px] text-sm md:text-base mb-3">
                 WELCOME TO COFFEE PANDAWA
             </p>
 
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
                 Nikmati Aroma <br>
                 Kopi Terbaik Nusantara
             </h1>
 
-            <p class="text-gray-300 mb-8 leading-relaxed">
+            <p class="text-gray-300 text-sm sm:text-base md:text-lg mb-8 leading-relaxed">
                 Tempat terbaik untuk menikmati kopi berkualitas,
                 suasana nyaman, dan cerita yang tak terlupakan.
             </p>
 
-            <div class="flex gap-4">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a href="#menu"
                     class="bg-amber-400 text-black px-7 py-3 rounded-full font-semibold hover:scale-105 transition">
                     Explore Menu
@@ -91,28 +92,116 @@
 
         </div>
 
+        <!-- RIGHT IMAGE -->
+        <div class="w-full md:w-1/2 flex justify-center">
+
+            <img src="assets/img/cangkir-tremos.png" 
+                    alt="Coffee"
+                    class="w-44 sm:w-56 md:w-[450px] max-w-full h-auto drop-shadow-2xl animate-float">
+
+        </div>
+
     </div>
+
+    <!-- Gradient Divider -->
+    <div class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-b from-transparent to-zinc-950 z-10"></div>
 </section>
 
 
 <!-- ABOUT US -->
-<section id="about" class="py-24 bg-zinc-950 text-white">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<section id="about" class="relative py-24 bg-zinc-950 text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6   grid md:grid-cols-2 gap-12 items-center">
+
+<!-- SUSU COKLAT (kiri dekat teks) -->
+<img src="assets/img/susu-coklat.png"
+    class="absolute 
+            -left-1 -top-[-200px] -translate-y-1/2        /* mobile */
+            sm:-left-1 sm:-top-[-200px]                    /* tablet kecil */
+            md:-left-1 md:top-1/2                   /* tablet besar */
+            lg:-left-1 lg:top-1/2                   /* desktop */
+            w-[480px] sm:w-[500px] md:w-[580px] lg:w-[640px]
+            z-0 opacity-30">
+
+<!-- WAYANG BIMA (kanan dekat teks) -->
+<img src="assets/img/bima.png"
+    class="absolute 
+            -right-28 top-[590px] -translate-y-1/2       /* mobile */
+            sm:-right-32 sm:top-[580px]                    /* tablet kecil */
+            md:-right-[120px] md:top-[400px]                   /* tablet besar */
+            lg:-right-32 lg:top-[380px]                   /* desktop */
+            w-[440px] sm:w-[500px] md:w-[480px] lg:w-[500px]
+            z-0 opacity-30">
+
+<!-- AWAN (kanan bagian bawah) -->
+<img src="assets/img/awan-8.png"
+    class="absolute 
+            -right-28 top-[730px] -translate-y-1/2       /* mobile */
+            sm:-right-28 sm:top-[710px]                   /* tablet kecil */
+            md:-right-32 md:top-[556px]                   /* tablet besar */
+            lg:-right-44 lg:top-[520px]                   /* desktop */
+            w-[480px] sm:w-[520px] md:w-[540px] lg:w-[600px]
+            z-0 opacity-85">
+
+<!-- AWAN (kanan bagian atas) -->
+<img src="assets/img/awan-2.png"
+    class="absolute 
+            -right-60 top-[710px] -translate-y-1/2       /* mobile */
+            sm:-right-[250px] sm:top-[690px]                   /* tablet kecil */
+            md:-right-[280px] md:top-[530px]                  /* tablet besar */
+            lg:-right-72 lg:top-[470px]                   /* desktop */
+            w-[480px] sm:w-[520px] md:w-[540px] lg:w-[570px]
+            z-0 opacity-85">
+
 
         <!-- Image -->
-        <div>
-            <img src="assets/img/about-coffee.jpg"
-                    class="rounded-2xl shadow-2xl"
+        <div class="flex justify-center items-center h-full">
+            <div class="relative flex justify-center items-center">
+            
+                <!-- Background bulat (paling belakang) -->
+                <div class="absolute 
+                            w-64 h-64 
+                            sm:w-72 sm:h-72 
+                            md:w-80 md:h-80 
+                            lg:w-96 lg:h-96
+                            bg-zinc-900 rounded-full z-0"></div>
+            
+                <!-- Daun mint 1 (di belakang gambar) -->
+                <img src="assets/img/daun-mint.png"
+                    class="absolute 
+                            w-16 top-6 left-2                   /* mobile */
+                            sm:w-16 sm:top-8 sm:left-3          /* tablet kecil */
+                            md:w-20 md:top-10 md:left-4         /* tablet */
+                            lg:w-24 lg:top-10 lg:left-4         /* dekstop */
+                            z-10 rotate-[-130deg] opacity-80">
+            
+                <!-- Gambar utama -->
+                <img src="assets/img/about-coffee.png"
+                    class="relative w-52 
+                            sm:w-52 
+                            md:w-64 
+                            lg:w-80
+                            animate-float object-contain drop-shadow-xl z-20"
                     alt="About Coffee">
+            
+                <!-- Daun mint 2 (paling depan) -->
+                <img src="assets/img/daun-mint-2.png"
+                    class="absolute 
+                            w-14 bottom-2 right-2               /* mobile */
+                            sm:w-16 sm:bottom-3 sm:right-3      /* tablet kecil */
+                            md:w-20 md:bottom-4 md:right-4      /* tablet */
+                            lg:w-24 lg:bottom-4 lg:right-4      /* desktop */
+                            z-30 rotate-[-5deg]">
+            
+            </div>
         </div>
 
         <!-- Text -->
         <div>
-            <p class="text-amber-400 tracking-widest mb-3">
+            <p class="text-amber-400 tracking-widest text-sm md:text-base mb-3">
                 ABOUT US
             </p>
 
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
                 Cerita di Balik <br> Secangkir Kopi
             </h2>
 
@@ -128,7 +217,7 @@
             </p>
 
             <a href="#menu"
-                class="bg-amber-400 text-black px-7 py-3 rounded-full font-semibold hover:scale-105 transition">
+                class="inline-block bg-amber-400 text-black px-7 py-3 rounded-full font-semibold hover:scale-105 transition">
                 View Menu
             </a>
         </div>
@@ -148,37 +237,283 @@
             </h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid 
+                    grid-cols-1        /* mobile */
+                    sm:grid-cols-2     /* tablet kecil */
+                    md:grid-cols-2     /* tablet */
+                    lg:grid-cols-3     /* desktop */
+                    xl:grid-cols-3     /* layar besar */
+                    gap-6 sm:gap-8">
 
             <!-- Card -->
-            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition">
-                <img src="assets/img/menu1.jpg" class="rounded-xl mb-5">
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition h-full flex flex-col w-full max-w-sm mx-auto">
+                <!-- WRAPPER GAMBAR -->
+                <div class="relative flex justify-center mb-5">
+                
+                    <!-- 2️⃣ ES BATU (kiri tengah - di belakang gambar) -->
+                    <img src="assets/img/es-batu-3.png"
+                        class="absolute 
+                                left-14 top-1/2 
+                                sm:left-8 sm:top-1/2
+                                md:left-[55px] md:top-1/2
+                                lg:left-10 lg:top-1/2
+                                -translate-y-1/2 w-20 z-0">
+                
+                    <!-- GAMBAR UTAMA -->
+                    <img src="assets/img/kopi-americano.png"
+                        class="relative h-48 object-contain z-10">
+                
+                    <!-- 1️⃣ ES BATU - JERUK - MINT (kanan bawah - di depan gambar) -->
+                    <img src="assets/img/jeruk-mint-ice.png"
+                        class="absolute 
+                                right-20 -bottom-2 
+                                sm:right-14 sm:-bottom-2 
+                                md:right-[85px] md:-bottom-2 
+                                lg:right-16 lg:-bottom-2 
+                                w-20 z-20">
+                
+                    <!-- 3️⃣ ES BATU (kanan atas - di depan gambar) -->
+                    <img src="assets/img/es-batu-4.png"
+                        class="absolute 
+                                right-12 -top-2 
+                                sm:right-7 sm:-top-2 
+                                md:right-[55px] md:-top-2 
+                                lg:right-10 lg:-top-2
+                                w-16 z-20">
+                
+                </div>
+            
+                <!-- TEXT -->
                 <h3 class="text-2xl font-bold mb-2">Cappuccino</h3>
                 <p class="text-gray-400 mb-4">
                     Perpaduan espresso dan susu creamy.
                 </p>
-                <span class="text-amber-400 text-xl font-bold">Rp 28K</span>
+                <span class="text-amber-400 text-xl font-bold mt-auto">Rp 28K</span>
+            
             </div>
 
-            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition">
-                <img src="assets/img/menu2.jpg" class="rounded-xl mb-5">
-                <h3 class="text-2xl font-bold mb-2">Latte Pandawa</h3>
-                <p class="text-gray-400 mb-4">
-                    Signature latte khas Coffee Pandawa.
-                </p>
-                <span class="text-amber-400 text-xl font-bold">Rp 32K</span>
-            </div>
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition h-full flex flex-col w-full max-w-sm mx-auto">
+                <!-- WRAPPER GAMBAR -->
+                <div class="relative flex justify-center mb-5">
+                
+                    <!-- 2️⃣ ES BATU (kiri tengah - di belakang gambar) -->
+                    <img src="assets/img/es-batu-3.png"
+                        class="absolute 
+                                left-14 top-1/2 
+                                sm:left-8 sm:top-1/2
+                                md:left-[55px] md:top-1/2
+                                lg:left-10 lg:top-1/2
+                                -translate-y-1/2 w-20 z-0">
 
-            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition">
-                <img src="assets/img/menu3.jpg" class="rounded-xl mb-5">
+                    <!-- GAMBAR UTAMA -->
+                    <img src="assets/img/kopi-caramellatte.png" class="h-48 object-cover mx-auto rounded-xl mb-5">
+
+                    <!-- 1️⃣ ES BATU - JERUK - MINT (kanan bawah - di depan gambar) -->
+                    <img src="assets/img/jeruk-mint-ice.png"
+                        class="absolute 
+                                right-20 -bottom-2 
+                                sm:right-14 sm:-bottom-2 
+                                md:right-[85px] md:-bottom-2 
+                                lg:right-16 lg:-bottom-2 
+                                w-20 z-20">
+                
+                    <!-- 3️⃣ ES BATU (kanan atas - di depan gambar) -->
+                    <img src="assets/img/es-batu-4.png"
+                        class="absolute 
+                                right-12 -top-2 
+                                sm:right-7 sm:-top-2 
+                                md:right-[55px] md:-top-2 
+                                lg:right-10 lg:-top-2
+                                w-16 z-20">
+                
+                </div>
+                
+                <!-- TEXT -->
                 <h3 class="text-2xl font-bold mb-2">Espresso</h3>
                 <p class="text-gray-400 mb-4">
                     Strong, bold, dan penuh karakter.
                 </p>
-                <span class="text-amber-400 text-xl font-bold">Rp 24K</span>
+                <span class="text-amber-400 text-xl font-bold mt-auto">Rp 24K</span>
+            </div>
+
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition h-full flex flex-col w-full max-w-sm mx-auto">
+                <!-- WRAPPER GAMBAR -->
+                <div class="relative flex justify-center mb-5">
+                
+                    <!-- 2️⃣ ES BATU (kiri tengah - di belakang gambar) -->
+                    <img src="assets/img/es-batu-3.png"
+                        class="absolute 
+                                left-14 top-1/2 
+                                sm:left-8 sm:top-1/2
+                                md:left-[55px] md:top-1/2
+                                lg:left-10 lg:top-1/2
+                                -translate-y-1/2 w-20 z-0">
+
+                    <!-- GAMBAR UTAMA -->
+                    <img src="assets/img/kopi-macha.png" class="h-48 object-cover mx-auto rounded-xl mb-5">
+
+                    <!-- 1️⃣ ES BATU - JERUK - MINT (kanan bawah - di depan gambar) -->
+                    <img src="assets/img/jeruk-mint-ice.png"
+                        class="absolute 
+                                right-20 -bottom-2 
+                                sm:right-14 sm:-bottom-2 
+                                md:right-[85px] md:-bottom-2 
+                                lg:right-16 lg:-bottom-2 
+                                w-20 z-20">
+                
+                    <!-- 3️⃣ ES BATU (kanan atas - di depan gambar) -->
+                    <img src="assets/img/es-batu-4.png"
+                        class="absolute 
+                                right-12 -top-2 
+                                sm:right-7 sm:-top-2 
+                                md:right-[55px] md:-top-2 
+                                lg:right-10 lg:-top-2
+                                w-16 z-20">
+                
+                </div>
+                
+                <!-- TEXT -->
+                <h3 class="text-2xl font-bold mb-2">Latte Pandawa</h3>
+                <p class="text-gray-400 mb-4">
+                    Signature latte khas Coffee Pandawa.
+                </p>
+                <span class="text-amber-400 text-xl font-bold mt-auto">Rp 32K</span>
+            </div>
+
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition h-full flex flex-col w-full max-w-sm mx-auto">
+                <!-- WRAPPER GAMBAR -->
+                <div class="relative flex justify-center mb-5">
+                
+                    <!-- 2️⃣ ES BATU (kiri tengah - di belakang gambar) -->
+                    <img src="assets/img/es-batu-3.png"
+                        class="absolute 
+                                left-14 top-1/2 
+                                sm:left-8 sm:top-1/2
+                                md:left-[55px] md:top-1/2
+                                lg:left-10 lg:top-1/2
+                                -translate-y-1/2 w-20 z-0">
+
+                    <!-- GAMBAR UTAMA -->
+                    <img src="assets/img/kopi-cappuccino.png" class="h-48 object-cover mx-auto rounded-xl mb-5">
+
+                    <!-- 1️⃣ ES BATU - JERUK - MINT (kanan bawah - di depan gambar) -->
+                    <img src="assets/img/jeruk-mint-ice.png"
+                        class="absolute 
+                                right-20 -bottom-2 
+                                sm:right-14 sm:-bottom-2 
+                                md:right-[85px] md:-bottom-2 
+                                lg:right-16 lg:-bottom-2 
+                                w-20 z-20">
+                
+                    <!-- 3️⃣ ES BATU (kanan atas - di depan gambar) -->
+                    <img src="assets/img/es-batu-4.png"
+                        class="absolute 
+                                right-12 -top-2 
+                                sm:right-7 sm:-top-2 
+                                md:right-[55px] md:-top-2 
+                                lg:right-10 lg:-top-2
+                                w-16 z-20">
+                
+                </div>
+                
+                <!-- TEXT -->
+                <h3 class="text-2xl font-bold mb-2">Latte Pandawa</h3>
+                <p class="text-gray-400 mb-4">
+                    Signature latte khas Coffee Pandawa.
+                </p>
+                <span class="text-amber-400 text-xl font-bold mt-auto">Rp 32K</span>
+            </div>
+
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition h-full flex flex-col w-full max-w-sm mx-auto">
+                <!-- WRAPPER GAMBAR -->
+                <div class="relative flex justify-center mb-5">
+                
+                    <!-- 2️⃣ ES BATU (kiri tengah - di belakang gambar) -->
+                    <img src="assets/img/es-batu-3.png"
+                        class="absolute 
+                                left-14 top-1/2 
+                                sm:left-8 sm:top-1/2
+                                md:left-[55px] md:top-1/2
+                                lg:left-10 lg:top-1/2
+                                -translate-y-1/2 w-20 z-0">
+
+                    <!-- GAMBAR UTAMA -->
+                    <img src="assets/img/kopi-eskopihitamsusu.png" class="h-48 object-cover mx-auto rounded-xl mb-5">
+
+                    <!-- 1️⃣ ES BATU - JERUK - MINT (kanan bawah - di depan gambar) -->
+                    <img src="assets/img/jeruk-mint-ice.png"
+                        class="absolute 
+                                right-20 -bottom-2 
+                                sm:right-14 sm:-bottom-2 
+                                md:right-[85px] md:-bottom-2 
+                                lg:right-16 lg:-bottom-2 
+                                w-20 z-20">
+                
+                    <!-- 3️⃣ ES BATU (kanan atas - di depan gambar) -->
+                    <img src="assets/img/es-batu-4.png"
+                        class="absolute 
+                                right-12 -top-2 
+                                sm:right-7 sm:-top-2 
+                                md:right-[55px] md:-top-2 
+                                lg:right-10 lg:-top-2
+                                w-16 z-20">
+                
+                </div>
+                
+                <!-- TEXT -->
+                <h3 class="text-2xl font-bold mb-2">Cappuccino</h3>
+                <p class="text-gray-400 mb-4">
+                    Perpaduan espresso dan susu creamy.
+                </p>
+                <span class="text-amber-400 text-xl font-bold mt-auto">Rp 28K</span>
+            </div>
+
+            <div class="bg-zinc-900 p-6 rounded-2xl hover:-translate-y-2 transition h-full flex flex-col w-full max-w-sm mx-auto">
+                <!-- WRAPPER GAMBAR -->
+                <div class="relative flex justify-center mb-5">
+                
+                    <!-- 2️⃣ ES BATU (kiri tengah - di belakang gambar) -->
+                    <img src="assets/img/es-batu-3.png"
+                        class="absolute 
+                                left-14 top-1/2 
+                                sm:left-8 sm:top-1/2
+                                md:left-[55px] md:top-1/2
+                                lg:left-10 lg:top-1/2
+                                -translate-y-1/2 w-20 z-0">
+
+                    <!-- GAMBAR UTAMA -->
+                    <img src="assets/img/kopi-mocha.png" class="h-48 object-cover mx-auto rounded-xl mb-5">
+
+                    <!-- 1️⃣ ES BATU - JERUK - MINT (kanan bawah - di depan gambar) -->
+                    <img src="assets/img/jeruk-mint-ice.png"
+                        class="absolute 
+                                right-20 -bottom-2 
+                                sm:right-14 sm:-bottom-2 
+                                md:right-[85px] md:-bottom-2 
+                                lg:right-16 lg:-bottom-2 
+                                w-20 z-20">
+                
+                    <!-- 3️⃣ ES BATU (kanan atas - di depan gambar) -->
+                    <img src="assets/img/es-batu-4.png"
+                        class="absolute 
+                                right-12 -top-2 
+                                sm:right-7 sm:-top-2 
+                                md:right-[55px] md:-top-2 
+                                lg:right-10 lg:-top-2
+                                w-16 z-20">
+                
+                </div>
+                
+                <!-- TEXT -->
+                <h3 class="text-2xl font-bold mb-2">Espresso</h3>
+                <p class="text-gray-400 mb-4">
+                    Strong, bold, dan penuh karakter.
+                </p>
+                <span class="text-amber-400 text-xl font-bold mt-auto">Rp 24K</span>
             </div>
 
         </div>
+        
     </div>
 </section>
 
