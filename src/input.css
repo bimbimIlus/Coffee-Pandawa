@@ -10,3 +10,273 @@ nav::before {
 
   @apply absolute inset-0 bg-white/10 backdrop-blur-md rounded-b-2xl -z-10;
 }
+
+/* DEFAULT */
+.about-left,
+.about-right,
+.cloud-bottom,
+.cloud-top,
+.circle-bg,
+.main-image,
+.mint-left,
+.mint-right,
+.about-text {
+  opacity: 0;
+}
+
+/* ANIMATION CLASSES */
+.show-left {
+  animation: slideLeft 1.3s ease forwards;
+}
+
+.show-right {
+  animation: slideRight 1.3s ease forwards;
+}
+
+.show-cloud {
+  animation: cloudMove 1.5s ease forwards;
+}
+
+.show-circle {
+  animation: scaleCircle 1.2s ease forwards;
+}
+
+.show-image {
+  animation: imageDrop 1.2s ease forwards;
+}
+
+.show-mint-left {
+  animation: mintRotate 1.3s ease forwards;
+}
+
+.show-mint-right {
+  animation: mintAppear 1s ease forwards;
+}
+
+.show-text {
+  animation: textReveal 1s ease forwards;
+}
+
+/* KEYFRAMES */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+  to {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cloudMove {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleCircle {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes imageDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mintRotate {
+  from {
+    opacity: 0;
+    transform: rotate(-220deg) scale(0.5);
+  }
+  to {
+    opacity: 0.8;
+    transform: rotate(-130deg) scale(1);
+  }
+}
+
+@keyframes mintAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Menu */
+
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* CARD HOVER */
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.15);
+}
+
+/* ES BATU KIRI */
+.menu-card:hover .ice-left {
+  transform: translate(-12px, -50%) scale(1.15);
+}
+
+/* MINUMAN */
+.menu-card:hover .drink-img {
+  transform: scale(1.08) rotate(6deg);
+}
+
+/* ES BATU JERUK */
+.menu-card:hover .ice-orange {
+  transform: translate(10px, 10px) scale(1.15);
+}
+
+/* ES BATU ATAS */
+.menu-card:hover .ice-top {
+  transform: translate(10px, -10px) scale(1.15);
+}
+
+/* =========================
+/* =========================
+    SECTION TESTIMONIAL
+========================= */
+========================= */
+
+/* =========================
+    DEFAULT STATE
+========================= */
+
+/* =========================
+   TOP TEXT
+========================= */
+
+.testimonial-top {
+  opacity: 0;
+  margin-top: -50px;
+  transition:
+    opacity 1s ease,
+    margin-top 1s ease;
+}
+
+/* =========================
+   TESTIMONIAL CONTENT
+========================= */
+
+.testimonial-fade {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+/* =========================
+   CLOUD LEFT
+========================= */
+
+.cloud-left {
+  opacity: 0;
+  margin-left: -120px;
+  transition:
+    opacity 1.8s ease,
+    margin-left 1.8s ease;
+}
+
+/* =========================
+   CLOUD RIGHT
+========================= */
+
+.cloud-right {
+  opacity: 0;
+  margin-right: -120px;
+  transition:
+    opacity 1.8s ease,
+    margin-right 1.8s ease;
+}
+
+/* =========================
+   WAYANG LEFT
+========================= */
+
+.wayang-left {
+  opacity: 0;
+  margin-left: -120px;
+  margin-top: 120px;
+
+  transition:
+    opacity 2s ease,
+    margin-left 2s ease,
+    margin-top 2s ease;
+}
+
+/* =========================
+   WAYANG RIGHT
+========================= */
+
+.wayang-right {
+  opacity: 0;
+  margin-right: -120px;
+  margin-top: 120px;
+
+  transition:
+    opacity 2s ease,
+    margin-right 2s ease,
+    margin-top 2s ease;
+}
+
+/* =========================
+   ACTIVE
+========================= */
+
+.show-animate {
+  opacity: 1 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+}
